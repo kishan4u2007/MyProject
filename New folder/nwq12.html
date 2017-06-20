@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+
+// $("#submitBtn").click (function(){
+
+// 	var result = $('input[type="checkbox"]:checked');
+
+// if (result.length > 0){
+
+// 	$("#divResult").html(result.val() + "is checked");
+// }else {
+
+// 	$("#divResult").html("No checkbox is checked");
+// }
+
+
+
+// });
+
+
+// $("#submitBtn").click (function(){
+
+// 	var result = $('input[type="checkbox"]:checked');
+
+// if (result.length > 0){
+
+// 	var resultString = result.length + " checked is checked <br />";
+// 	//this is for how many checkbox is selected
+
+// 	result.each (function(){
+// 	resultString +=$(this).val() + "<br />";
+
+// 	})
+
+// 	$("#divResult").html(resultString);
+// }else {
+
+// 	$("#divResult").html("No checkbox is checked");
+// }
+
+
+
+// });
+
+
+
+$(document).ready(function() {
+
+$("input[name='Skills']").click(function() {
+	getCheckedCheckBoxes('Skills');
+});
+
+
+$("input[name='Cities']").click(function () {
+	getCheckedCheckBoxes('Cities');	
+});
+
+var getCheckedCheckBoxes = function (grupName) {
+
+	var result = $('input[name ="'grupName'"]:checked');
+	// var result = $('input[name="'+ grupName +'"]:checked');
+	if(result.length > 0 ) {
+		var resultString = result.length + "checkbox checked";
+		result.each(function(){
+			resultString += $(this).val() + "<br />"
+		});
+
+	 	$("#div" + grupName).html(resultString);
+	}
+
+	// if (result.length > 0) {
+	// 	var resultString = result.length + " checkedBox checked <br />";
+	// 	result.each (function(){
+	// 	resultString += $(this).val() + "<br />"
+	// });
+	
+	// $("#div" + grupName).html(resultString);
+	// } else {
+	// $("#div" + grupName).html("No checkbox button is cheked");
+	// }
+
+	};
+
+	});	
+
+
+</script>
+</head>
+
+
+<body style="font-family:Arial">
+
+Skills :
+
+<input type="checkbox" name="Skills" value="Javascript"> Javascript
+<input type="checkbox" name="Skills" value="Jquery"> Jquery
+<input type="checkbox" name="Skills" value="c#"> c#
+<input type="checkbox" name="Skills" value="VB"> VB
+
+<br />
+<br />
+
+Preferred Cities :
+
+<input type="checkbox" name="Cities" value="New York"> New York
+<input type="checkbox" name="Cities" value="New Delhi"> New Delhi
+<input type="checkbox" name="Cities" value="London"> London
+<input type="checkbox" name="Cities" value="Dubai"> Dubai
+<br />
+<br />
+
+<input type="button" id="btnGetSelectedSkills" value="Get Selected Skills" />
+<input type="button" id="btnGetSelectedCities" value="Get Selected Cities" />
+
+<br />
+<br />
+
+<!-- <div id="divResult"></div> -->
+<div id="divSkills"></div>
+
+<br />
+<br />
+
+<div id="divCities"></div>
+
+</body>
+</html>

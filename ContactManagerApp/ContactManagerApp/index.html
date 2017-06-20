@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="contactManagerApp" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Manager Application</title>
+	<style type="text/css">
+       
+     table{
+     	margin-top: 20px;
+     	min-width: 400px;
+        border-collapse: collapse;
+     }
+
+	</style>
+</head>
+<body>
+<div ng-controller="contactManagerCtrl">
+    <h1>New Contact</h1>
+	<form ng-submit="addContact(contact);">
+	    <p>Name</p>
+		<input ng-model="contact.name" type="text"/>
+		<p>Phone</p>		
+		<input ng-model="contact.phone" type="text"/>
+		<br/><br/>
+	    <input type="submit" value="Add"></input>
+	</form>	
+	<h1>Contacts List</h1>
+	<table border="1">	
+	  <tr>
+	  	<th>Name</th>
+	  	<th>Phone</th>
+	  	<th>Actions</th>
+	  </tr>
+	  <tr ng-repeat="contact in contacts">
+	   <td>{{contact.name}}</td>
+	   <td>{{contact.phone}}</td>
+	   <td><a href="#" ng-click="edit($index);">Edit</a><a href="#" ng-click="delete($index);">Delete</a></td>
+	  </tr>
+	</table>
+</div>
+<script src="angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

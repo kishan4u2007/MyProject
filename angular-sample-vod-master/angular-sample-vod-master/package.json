@@ -1,0 +1,26 @@
+{
+  "name": "Video-on-Demand",
+  "version": "0.0.1",
+  "description": "Video on Demand Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "assert": "latest",
+    "body-parser": "^1.15.0",
+    "express": "latest",
+    "method-override": "^2.3.5",
+    "moment": "^2.12.0",
+    "mongodb": "^2.1.7",
+    "mongoskin": "^2.0.3",
+    "should": "latest",
+    "supertest": "latest",
+    "winston": "latest"
+  },
+  "author": "Prasad Hewage",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}

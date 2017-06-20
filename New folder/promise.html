@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<script src="jquery-2.1.4.min.js"></script>
+   <script type="text/javascript">
+
+   //Simple Example
+
+   // let promiseToCleanTheRoom = new Promise (function(resolve, reject){
+   //  let isClean = false;
+
+   //  if(isClean) {
+   //    resolve("Clean");
+   //  }else{
+   //    reject("not Clean");
+   //  }
+   // });
+
+   // 	promiseToCleanTheRoom.then(function(fromResolve){
+   //    console.log("Ths is Room is " + fromResolve);
+   //  }).catch(function(fromReject){
+   //    console.log("Ths is Room " + fromReject);
+   //  })
+
+//Complex Example
+
+let cleanRoom = function(){
+  return new Promise (function(resolve, reject){
+    resolve(" Cleaned the Room");
+  });
+};
+
+let removeGarbage = function(message){
+  return new Promise (function(resolve, reject){
+    resolve(message + " Removed Garbage");
+  });
+};
+
+ let winIcecream = function(message){
+  return new Promise (function(resolve, reject){
+    resolve(message + " Won Icecream");
+  });
+ }; 
+
+
+cleanRoom().then(function(result){
+  return removeGarbage(result);
+}).then(function(result){
+  return winIcecream(result);
+}).then(function(result){
+  console.log("finished" + result);
+})
+
+
+//Or 
+//if you want finish all three promise and do somethings
+Promise.all([cleanRoom(), removeGarbage(), winIcecream()]).then(function(){
+  console.log("all finished")
+})
+
+//Or 
+//if you want to finish one of them from all promise and do something
+Promise.race([cleanRoom(), removeGarbage(), winIcecream()]).then(function(){
+  console.log("One of then is finished")
+})
+   
+</script>    
+</head>
+<body>
+   
+  
+
+</body>
+</html>

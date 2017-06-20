@@ -1,0 +1,87 @@
+.container {
+    width: 260px;
+    font-family: arial;
+    font-size: 13px;
+}
+.header {
+    background: #424242;
+    text-align: center;
+    height: 43px;
+    line-height: 43px;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+}
+#bar {
+    background: #ef5f3c;
+    width: 100%;
+    height: 10px;
+}
+.barArea {
+    border: solid 1px #ccc;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+.barText {
+    padding: 15px;
+}
+.barText span {
+    color: #ef5f3c;
+}
+.formArea {
+    padding: 10px 0px;
+}
+.formArea input {
+    float: left;
+    border: solid 1px #ccc;
+    padding: 10px;
+    width: 60px;
+    margin-right: 10px;
+    padding-left: 30px;
+}
+.dolar {
+    position: absolute;
+    background: #fff;
+    height: 30px;
+    margin: 2px;
+    line-height: 35px;
+    width: 20px;
+    text-align: center;
+}
+.button {
+    background: #1cbc2c;
+    padding: 10px;
+    border: solid 1px #ccc;
+    color: #fff;
+    border-radius: 4px;
+}
+.linkText {
+    color: #0987bb;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #424242;
+    position: absolute;
+    bottom: -5px;
+    right: 26px;
+}
+#bar_graph_wrapper {
+    height: 15px;
+    position: relative;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+}
+.bars {
+    height: 100%;
+    width: 0;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    top: 0px;
+}
+#bar1 {
+    background-color: #ef5f3c;
+}

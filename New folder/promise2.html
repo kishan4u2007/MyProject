@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>   
+</head>
+<body>   
+<div id="container"></div>
+<script type="text/javascript">
+/*-------------simple Example-----------------
+
+var promiseCleanTheRoom = new Promise (function (resolve, reject) {
+  var cleanTheRoom = false;
+  if(cleanTheRoom){
+    resolve("Clean");
+  }else{
+    reject("Not Clean");
+  }
+});
+
+//calling function
+promiseCleanTheRoom.then(function(fromResolved){
+  console.log("The Room is " + fromResolved);
+}).catch(function(fromReject){
+  console.log("The Room is " + fromReject);
+})
+
+----*/
+
+
+//step1
+let cleanRoom = function(){
+  return new Promise(function(resolve, reject){
+    resolve("Clean The Room and");
+  });
+};
+
+let removeGarbage = function(message){
+  return new Promise(function(resolve, reject){
+    resolve(message + " Remove Garbage and");
+  });
+};
+
+let winIceCream = function(message){
+  return new Promise(function(resolve, reject){
+    resolve(message + " Win Ice Cream !!!");
+  });
+};
+
+cleanRoom().then(function(result){
+  return removeGarbage(result);
+}).then(function(result){
+  return winIceCream(result);
+}).then(function(result){
+  console.log(result);
+})
+
+
+//step2
+
+//step3
+
+
+   
+</script> 
+</body>
+</html>

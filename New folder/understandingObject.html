@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<script src="jquery-2.1.4.min.js"></script>
+   <script type="text/javascript">
+
+   var Pizza = {
+    crust:"thin",
+    topping:3,
+    hasBackon:true,
+    howManyTopping : function(){
+      return this.topping;
+    }
+   };
+
+   Pizza.price = "12$";
+   console.log(Pizza.howManyTopping());
+
+
+   var Pizza = {
+    var crust = "thin"; //private variable
+    this.hasBackon = true;
+
+    this.gethasBackon = function(){
+      return this.hasBackon;
+    }
+
+    this.getCrust = function(){ //public method
+      return crust;
+    };
+
+   };   
+
+   var PizzaA = new Pizza(); 
+
+   console.log(PizzaA.getCrust());
+
+ 
+ 
+   
+</script>    
+</head>
+<body>
+   
+  
+
+</body>
+</html>

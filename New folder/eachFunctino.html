@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+   <script type="text/javascript">
+   	$(document).ready(function() {
+
+   		var result = '';
+
+   		$("li").each(function(index, element) {
+   			//alert(index  + ":" + $(element).text() );
+   			//alert(index  + ":" + $(this).text() );
+   			//not good for dom 
+   			//$("#divResult").html($("#divResult").html()  + "</br>" + $(this).text());
+
+   			result += "</br>" + $(this).text();
+
+   		});
+
+   		$("#divResult").html(result);
+   		
+    });
+</script>    
+</head>
+<body>
+   
+  <ul>
+  	<li>US</li>
+  	<li>UK</li>
+  	<li>AuS</li>
+  	<li>Lanka</li>
+  	<li>India</li>
+  </ul>
+
+   <div id="divResult"></div>
+
+</body>
+</html>

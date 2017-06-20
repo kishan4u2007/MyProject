@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+
+<script type="text/javascript">
+
+var obj = function(){
+  this.i = 0; 
+  this.add = function(i){
+  this.i += i;
+  //return this;
+ }
+ 
+ this.subtract = function(i) {
+ this.i -= i;
+ //return this;
+ }
+ 
+ this.print = function(){
+ console.log(this.i);
+ }
+ 
+}
+
+var x = new obj();
+x.add(3);
+x.subtract(2);
+x.print();
+
+//x.add(3).subtract(2).print();
+
+ 
+ 
+   
+</script>    
+</head>
+<body>
+   
+  
+
+</body>
+</html>
