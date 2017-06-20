@@ -1,0 +1,33 @@
+<div ng-controller="videoController" >
+	<div class="row" ng-init="init()">
+        <div id="slide-container" tabIndex="1" ng-keydown="onKeyDown($event)">
+         <a class="btn btn-warning navigation left" ng-click="scroll('LEFT')" href="#" role="button" style=""> 
+                <i class="fa fa-angle-left fa-2x arrow"></i> 
+            </a> 
+            <div class="flexslider" flexslider>
+                <ul class="slides">               
+                <div ng-repeat="video in params.videos"  ng-attr-id="{{ 'vid_' + video.id}}" ng-model="video" class="thumbnail {{video.selectedClass}} {{index}} " ng-click="selectVideo()" >
+                    <img src="{{video.imgUrl}}" alt="..."/>
+                    <div class="caption">
+                        <h4>
+                            {{video.name}}
+                        </h4>
+                       
+                        <p>
+                            <a href="#" class="btn btn-primary" ng-click="play()" role="button">
+                                Play
+                            </a>
+                        </p>
+                    </div>
+                </div> 
+                
+
+                </ul>
+            </div>
+             <a class="btn btn-warning navigation right" ng-click="scroll('RIGHT')" href="#" role="button" style=""> 
+                <i class="fa fa-angle-right fa-2x arrow"></i> 
+            </a>
+          
+        </div>
+    </div>
+</div>
