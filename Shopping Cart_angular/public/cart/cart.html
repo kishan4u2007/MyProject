@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+	<!-- <h1>AngularJS Shopping Cart</h1> -->
+</div>
+
+<div class="container" ng-controller="CartCtrl">
+	<div class="row">
+		<div class="col-xs-7 col-md-8 col-lg-8 col-sm-8">
+			<div class="row">
+				<div class="col-xs-6 col-md-6 col-lg-6 col-sm-6" ng-repeat="data in shopData">
+					<div class="panel panel-primary">
+						<div class="panel-heading">{{data.item}}</div>
+						<check-list option="data.prices" name="data.id" selected="data.selected"></check-list>				
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-5 col-md-4 col-lg-4 col-sm-4">
+			<div class="panel panel-success">
+				<div class="panel-heading">Total</div>
+				<div class="panel-body"><h2>{{totalPrice()}}</h2></div>
+			</div>
+			<div class="checkout text-center">
+				<a href="#!/checkout" class="btn btn-danger">Checkout</a>
+			</div>
+		</div>
+	</div>
+</div>

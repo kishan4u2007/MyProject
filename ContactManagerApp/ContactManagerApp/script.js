@@ -48,7 +48,6 @@ angular.module('contactManagerApp',[]).
             };
 
             $scope.edit=function(id){
-
              $scope.contact=angular.copy($scope.contacts[id]);
             }                         
 
