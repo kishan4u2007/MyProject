@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="Assesment">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecommerce animations</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body ng-controller="ProductList">
+  <nav>
+  <div class='mini'>
+    <p class='products'>Empty</p>
+    <p class='names'></p>
+    <p class='miniprice'></p>
+  </div>
+  <ul>
+    <li><a ui-sref='cart'>Cart</a></li>
+  </ul>
+  <div class='cart icon-basket'>
+    <span class="number update">{{cartcount}}</span>
+  </div>
+</nav>
+<div class='container' ui-view="templateview">
+ 
+ 
+</div>
+<div class='quickviewContainer'>
+  <div class='close'></div>
+  <h2 class='headline'></h2>
+  <p class='description'></p>
+  <img src='https://placeimg.com/100/100'>
+  <img src='https://placeimg.com/100/100'>
+  <img src='https://placeimg.com/100/100'>
+</div>
+    <script src="js/jquery.min.js"></script>
+      <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/ngStorage.js"></script>
+
+    <script src="Module/AppModule.js"></script>
+    <script src="Controller/ProductListFactory.js"></script>
+    <script src="Controller/ProductListController.js"></script>
+    <script src="Controller/CartController.js"></script>
+    <script src="Controller/Aapplications.js"></script>
+</body>
+</html>

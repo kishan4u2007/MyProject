@@ -1,21 +1,49 @@
-<div class="jumbotron text-center">
-	<!-- <h1>AngularJS Shopping Cart</h1> -->
-</div>
+<div ng-controller="CartCtrl">
+	<nav>
+  <div class='mini'>
+    <p class='products'>Empty</p>
+    <p class='names'></p>
+    <p class='miniprice'></p>
+  </div>
+  <ul>
+    <li><a href='cart.html'>Cart</a></li>
+  </ul>
+  <div class='cart icon-basket'>
+    <a href="#!/checkout"><span class="number update">{{count}}</span></a>
+  </div>
 
-<div class="container" ng-controller="CartCtrl">
-	<div class="row">
-		<div class="col-xs-7 col-md-8 col-lg-8 col-sm-8">
+</nav>
+<div class='container'>
+  	<div class="product col-xs-7" ng-repeat="data in shopData">
+  			 <img ng-src='https://placeimg.com/200/100'>
+    		<h2 class='header'>{{data.commerce_product_title}}</h2>	    		
+    		<p class='price'>{{data.commerce_price}}</p>
+    		<div class='btn' ng-click="addItemToCart(data.commerce_product_title, data.commerce_price, data.product_id, data.field_product_image[0])">Add to cart</div>
+	    		
+	 </div>
+</div>
+<!-- 		<div class="col-xs-7 col-md-8 col-lg-8 col-sm-8">
 			<div class="row">
 				<div class="col-xs-6 col-md-6 col-lg-6 col-sm-6" ng-repeat="data in shopData">
 					<div class="panel panel-primary">
-						<div class="panel-heading">{{data.item}}</div>
-						<check-list option="data.prices" name="data.id" selected="data.selected"></check-list>				
+						<div class="panel-heading">{{data.commerce_product_title}}</div>
+						<div>{{data.commerce_price}}</div>
+						<check-list option="data.commerce_price" name="data.id" selected="data.selected"></check-list>				
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-5 col-md-4 col-lg-4 col-sm-4">
+	<!-- 	  	<div class="col-xs-7 col-md-8 col-lg-8 col-sm-8" ng-repeat="data in shopData">
+	  			 <img src='https://placeimg.com/200/100'>
+	    		<h2 class='header'>{{data.commerce_product_title}}</h2>	
+	    		<p class='description'> Lorem ipsum dolor sit amet consectetur.</p>
+	    		<p class='price'>{{data.commerce_price}}</p>
+	    		<div class='btn'>Add to cart</div>
+	    		
+	  		</div> -->
+
+<!-- 		<div class="col-xs-5 col-md-4 col-lg-4 col-sm-4">
 			<div class="panel panel-success">
 				<div class="panel-heading">Total</div>
 				<div class="panel-body"><h2>{{totalPrice()}}</h2></div>
@@ -24,5 +52,7 @@
 				<a href="#!/checkout" class="btn btn-danger">Checkout</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
+
+
 </div>

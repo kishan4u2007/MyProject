@@ -1,0 +1,53 @@
+﻿<link rel="stylesheet" href="css/style2.css">
+<div class="wrap cf">
+    <h1 class="projTitle">Responsive Table<span>-Less</span> Shopping Cart</h1>
+    <div class="heading cf">
+        <h1>My Cart</h1>
+        <a href="index.html" class="continue">Continue Shopping</a>
+    </div>
+    <div class="cart" ng-init="PopupCartlists()">
+        <!--    <ul class="tableHead">
+              <li class="prodHeader">Product</li>
+              <li>Quantity</li>
+              <li>Total</li>
+               <li>Remove</li>
+            </ul>-->
+        <ul class="cartWrap">
+            <li ng-repeat="cartitem in Cartlists" class="items odd" ng-class="{even: $even, odd: $odd}">
+
+                <div class="infoWrap">
+                    <div class="cartSection">
+                        <img ng-src="{{cartitem.imgurl}}" alt="" class="itemImg" />
+                      
+                        <h3>{{cartitem.title}}</h3>
+
+                        <p> <input type="number" class="qty" placeholder="0" ng-change="addQty(cartitem.id,quantity)" ng-model="quantity" value="{{cartitem.quantity}}" /> {{cartitem.quantity*cartitem.price}}</p>
+
+                    </div>
+
+
+                    <div class="prodTotal cartSection">
+                        <p>{{cartitem.price}}</p>
+                    </div>
+                    <div class="cartSection removeWrap">
+                        <a  class="remove" ng-click="kill(cartitem.id)">x</a>
+                    </div>
+                </div>
+            </li>
+          
+
+        </ul>
+    </div>
+
+
+    <div class="subtotal cf">
+        <ul>
+            <!--<li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+
+            <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>-->
+
+            <li class="totalRow final"><span class="label">Total</span><span class="value">{{totalAmount}}</span></li>
+            <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
+        </ul>
+    </div>
+</div>

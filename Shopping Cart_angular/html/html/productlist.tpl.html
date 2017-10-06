@@ -1,0 +1,13 @@
+﻿<div ng-init="PopupData()">
+    <div class='product' ng-repeat="Plist in Productlists">
+        <div ng-repeat="Plimg in Plist.field_product_image">
+            <img ng-src="{{Plimg}}">
+        </div>
+        <h2 class='header'>{{Plist.commerce_product_title}}</h2>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+        <p class='description'> Lorem ipsum dolor sit amet consectetur.</p>
+        <p class='price'>${{Plist.mrp}}</p>
+        <div class='btn' ng-click="addToCart(Plist.product_id,Plist.commerce_product_title,Plist.mrp,Plist.field_product_image[0])">Add to cart</div>
+        <div class='quickview'>Quickview</div>
+    </div>
+</div>
